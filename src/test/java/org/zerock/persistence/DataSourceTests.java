@@ -26,20 +26,22 @@ public class DataSourceTests {
 
 	@Setter(onMethod_ = @Autowired) // 세터 자동생성 setDataSource(DataSource)
 	private DataSource dataSource;
-	
+
 	@Setter(onMethod_ = @Autowired)
 	private SqlSessionFactory sqlSessionFactory;
-	
+
 	@Test
 	public void testMyBatis() {
-		try(SqlSession session = sqlSessionFactory.openSession();
-				Connection con = session.getConnection();
-				){
+
+		try (SqlSession session = sqlSessionFactory.openSession();
+				Connection con = session.getConnection(); // 마이바티스
+		) {
 			log.info(session);
 			log.info(con);
-		}catch (Exception e) {
+		} catch (Exception e) {
 			fail(e.getMessage());
 		}
+
 	}
 
 	@Test
