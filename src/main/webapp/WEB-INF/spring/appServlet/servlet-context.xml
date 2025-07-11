@@ -22,7 +22,7 @@
 	</beans:bean>
 	
 	<context:component-scan base-package="org.mbc.controller" />
-	<!-- 컨트롤러를 스프링이 관리하도록 설정 변경 -->
+	<!-- 컨트롤러를 스프링이 관여하도록 설정 변경 -->
 	
 	
 	
